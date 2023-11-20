@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <lightning-button label="Show Contacts" onclick={handleClick}></lightning-button>
+        <template if:true={showContacts}>
+            <lightning-datatable if:true={results}
+             key-field="id"
+             columns={columns}
+             data={results}
+            >
+            </lightning-datatable>    
+        </template>
+    </lightning-card>
+</template>
