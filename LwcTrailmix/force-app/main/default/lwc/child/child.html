@@ -1,7 +1,6 @@
 <template>
-  <h1>Hi this is child</h1>
-  <lightning-button label="Send data to Parent" variant="brand" onclick={handleClick}></lightning-button>
-  <div>
-    <p>{message}</p>
-  </div>
+ <h1>Hi this is child</h1>
+ <p>Message one from child is {messageOne}</p>
+ <p>Message two from Parent is {messageTwo}</p>
+ <lightning-button label="Communicate Parent" onclick={handleParent}></lightning-button>
 </template>

@@ -1,15 +1,15 @@
 import { LightningElement, track } from 'lwc';
 
 export default class Parent extends LightningElement {
-   @track name;
    @track color;
-
-   handleParent(event){
-    this.name = event.detail.name;
-    this.color = event.detail.color;
-   }
+   @track phone;
 
    handleChild(){
-    this.template.querySelector('c-child').message = "This is a message from child";
+      this.template.querySelector('c-child').messageTwo = "This is message from Parent";
+   }
+
+   handleParentData(event){
+      this.color = event.detail.color;
+      this.phone = event.detail.phone;
    }
 }

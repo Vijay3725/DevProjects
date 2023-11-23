@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <lightning-input placeholder="Enter Contact Name" onkeyup={handleSearch}></lightning-input>
+        <template if:true={showColumns}>
+            <lightning-datatable
+            key-field="id"
+            columns={columns}
+            data={result}
+            >
+            </lightning-datatable>
+        </template>
+        
+    </lightning-card>
+</template>

@@ -1,12 +1,9 @@
 <template>
     <lightning-card>
-        <h1>Hi this is Parent</h1>
-        <c-child onparentdata={handleParent}></c-child>
-        <div>
-            <p> My phone model is: {name}</p>
-            <p> My phone color is: {color}</p>
-        </div>
-        <lightning-button label="Send data to child" variant="success" onclick={handleChild}></lightning-button>
+        <h1> Hi this is Parent</h1>
+        <lightning-button label="Communicate Child" onclick={handleChild}></lightning-button>
+        <p>Color is {color}</p>
+        <p>Phone is {phone}</p>
+        <c-child onparentdata={handleParentData}></c-child>
     </lightning-card>
-    
 </template>
